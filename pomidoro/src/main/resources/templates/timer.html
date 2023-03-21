@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="public/img/tomato.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <title>Pomodoro</title>
+</head>
+
+<body>
+    <div class="base_container">
+
+        <main>
+            <form>
+                <div class="session_length setter">
+                    <div class="description">Czas trwania jednej sesji (min)</div>
+                    <input class="new" name="session_length" type = "number">
+
+                </div>
+                <div class="break_length setter">
+                    <div class="description">Długość przerwy (min)</div>
+                    <input class="new" name="break_length" type = "number">
+                </div>
+                <div class="number_of_breaks setter">
+                    <div class="description">Ilość sesji</div>
+                    <input class="new" name="number_of_sessions" type = "number">
+                </div>
+                <button type="submit" id="save">Zapisz</button>
+            </form>
+
+            <div class="timer" class="timer">
+                <div class="tomato_holder">
+<!--                    <img class= "timer_tomato" src="img/tomato.svg">-->
+                    <div id="timer_clock">
+                        <span id="timer-minutes">25</span>
+                        <span class="separator">:</span>
+                        <span id="timer-seconds">00</span>
+                    </div>
+                </div>
+                <div id="timer_description">Sesja</div>
+            </div>
+
+        </main>
+
+        <footer>
+            <button class="start footer-button" id="start-button">Start</button>
+            <button class="stop footer-button" id="stop-button">Stop</button>
+            <button class="reset footer-button" id="reset-button">Reset</button>
+        </footer>
+        
+    </div>
+</body>
