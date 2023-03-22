@@ -1,18 +1,18 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel ="stylesheet" type = "text/css" href="public/css/achievements.css">
-    <link rel ="stylesheet" type = "text/css" href="public/css/extra/navigation.css">
-
+    <div th:replace="extra/configuration :: link-menu"></div>
     <title>Pomidoro | Achievements</title>
 </head>
 
 <body>
+    <div th:replace="extra/navigation :: nav-menu"></div>
     <div class="base_container">
 
         <main>
 
             <div class="group">
-                <img class="achievement_icon" src ="../img/achievement_page/achievement.svg">
+                <img class="achievement_icon" th:src ="@{img/achievement_page/achievement.svg}">
                 <div class="achievement_text"></div>
             </div>
 

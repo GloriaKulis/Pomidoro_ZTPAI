@@ -2,11 +2,14 @@ package ztpai.pomidoro.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class IndexController {
+public class RoutingController {
 
-    @GetMapping("/")
+    @GetMapping("/login")
+//    @RequestMapping(value = "/image", method = RequestMethod.GET, produces = "image/svg+xml")
     public String login(){
         return "login";
     }
@@ -31,9 +34,12 @@ public class IndexController {
         return "todolist";
     }
 
-    @GetMapping("achievement")
+    @GetMapping("achievements")
     public String achievements(){
         return "achievements";
     }
+
+    @GetMapping("logout")
+    public String logout(){return "redirect:/login";}
 
 }

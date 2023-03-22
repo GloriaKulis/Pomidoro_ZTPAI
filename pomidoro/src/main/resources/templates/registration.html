@@ -1,19 +1,21 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Pomidoro | Registration</title>
 </head>
 <body>
+
 <div class="container">
     <div class = "left-side">
         <div class="title">Pomidoro</div>
         <div class="logo-container">
-            <img src ="../img/tomato.svg" id="tomato">
-            <img src="../img/login_page/watch.svg" id="watch">
+            <img th:src ="@{img/tomato.svg}" id="tomato">
+            <img th:src="@{img/login_page/watch.svg}" id="watch">
         </div>
     </div>
 
     <div class="login-container">
-        <form class ="register" action="registration" method="POST">
+        <form class ="register" >
 
             <input name="email" type="text" placeholder="Email@email.com">
             <input name="password" type="password" placeholder="Haslo">
@@ -21,7 +23,7 @@
             <input name="name" type="text" placeholder="Imie">
             <input name="surname" type="text" placeholder="Nazwisko">
             <button type="submit" title="zaloguj">Zarejestruj</button>
-            <p>Masz konto? <a href="login">Zaloguj</a></p>
+            <p>Masz konto? <a href="/login">Zaloguj</a></p>
         </form>
 
     </div>
