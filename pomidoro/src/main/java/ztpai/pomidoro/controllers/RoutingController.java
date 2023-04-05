@@ -8,37 +8,37 @@ import ztpai.pomidoro.models.*;
 @Controller
 public class RoutingController {
 
-    @GetMapping("/login/{user}")
-    public String login(@PathVariable User user){
+    @GetMapping("/login/{userID}")
+    public String login(@PathVariable int userID){
         return "login";
     }
 
-    @GetMapping("/registration/{user}")
-    public String registration(@PathVariable User user){
+    @GetMapping("/registration/{userID}")
+    public String registration(@PathVariable int userID){
         return "registration";
     }
 
-    @GetMapping("/timer/{user}/{timer}")
-    public String timer(@PathVariable User user,@PathVariable Timer timer){
+    @GetMapping("/timer/{userID}")
+    public String timer(@PathVariable int userID){
         return "timer";
     }
 
-    @GetMapping("/statistics/{user}/{statistics}")
-    public String statistics(@PathVariable User user,@PathVariable Statistics statistics){
+    @GetMapping("/statistics/{userID}")
+    public String statistics(@PathVariable int userID){
         return "statistics";
     }
 
-    @GetMapping("todolist/{user}/{toDoList}")
-    public String toDoList(@PathVariable User user, @PathVariable ToDoList toDoList){
+    @GetMapping("todolist/{userID}")
+    public String toDoList(@PathVariable int userID){
         return "todolist";
     }
 
-    @GetMapping("achievements/{user}/{achievements}")
-    public String achievements(@PathVariable User user,@PathVariable Achievements achievements){
+    @GetMapping("achievements/{userID}")
+    public String achievements(@PathVariable int userID){
         return "achievements";
     }
 
-    @GetMapping("logout/{user}")
-    public String logout(@PathVariable User user){return "redirect:/login";}
+    @GetMapping("logout/{userID}")
+    public String logout(@PathVariable int userID){return "redirect:/login";}
 
 }
