@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<head> 
-
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="extra/configuration :: link-menu"></div>
     <title>Pomidoro | ToDoList</title>
 </head>
 
 <body>
     <div class="base_container">
-
+        <div th:replace="extra/navigation :: nav-menu"></div>
         <main>
             <div class="add-new">
                 <div class="label">Dodaj nowe zadanie:</div>
